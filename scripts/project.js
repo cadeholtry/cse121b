@@ -26,58 +26,58 @@ const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal") || (mon.type.length == 2 && mon.type[1].includes("Normal"))));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal")));
             break;
         case "fighting":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting") || mon.type[1].includes("Fighting")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting")));
             break;
         case "water":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Water") || mon.type[1].includes("Water")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Water")));
             break;
         case "fire":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fire") || mon.type[1].includes("Fire")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Fire")));
             break;
         case "grass":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Grass") || mon.type[1].includes("Grass")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Grass")));
             break;
         case "electric":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Electric") || mon.type[1].includes("Electric")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Electric")));
             break;
         case "poison":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Poison") || mon.type[1].includes("Poison")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Poison")));
             break;
         case "bug":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Bug") || mon.type[1].includes("Bug")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Bug")));
             break;
         case "psychic":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Psychic") || mon.type[1].includes("Psychic")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Psychic")));
             break;
         case "ghost":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ghost") || mon.type[1].includes("Ghost")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Ghost")));
             break;
         case "ground":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ground") || mon.type[1].includes("Ground")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Ground")));
             break;
         case "flying":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Flying") || mon.type[1].includes("Flying")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Flying")));
             break;
         case "ice":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ice") || mon.type[1].includes("Ice")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Ice")));
             break;
         case "rock":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Rock") || mon.type[1].includes("Rock")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Rock")));
             break;
         case "dragon":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Dragon") || mon.type[1].includes("Dragon")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Dragon")));
             break;
         case "steel":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Steel") || mon.type[1].includes("Steel")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Steel")));
             break;
         case "dark":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Dark") || mon.type[1].includes("Dark")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Dark")));
             break;
         case "fairy":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fairy") || mon.type[1].includes("Fairy")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Fairy")));
             break;
     }
 };
