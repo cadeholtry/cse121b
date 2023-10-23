@@ -26,7 +26,7 @@ const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type.includes("Normal")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal") || mon.type[1].includes("Normal")));
             break;
         case "notutah":
             displayPokemon(mons.filter(temple => !temple.location.includes("Utah")));
