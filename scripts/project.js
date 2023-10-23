@@ -17,7 +17,6 @@ const displayPokemon = (mons) => {
 const getAllMons = async () => {
     const response = await fetch("https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/pokedex.json");
     pokemonList = await response.json();
-    console.log(pokemonList);
     displayPokemon(pokemonList);
 };
 const reset = () => {
@@ -26,8 +25,8 @@ const reset = () => {
 const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
-        case "utah":
-            displayPokemon(mons.filter(temple => temple.location.includes("Utah")));
+        case "normal":
+            displayPokemon(mons.filter(mon => mon.type.includes("Normal")));
             break;
         case "notutah":
             displayPokemon(mons.filter(temple => !temple.location.includes("Utah")));
