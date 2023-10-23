@@ -17,6 +17,7 @@ const displayPokemon = (mons) => {
 const getAllMons = async () => {
     const response = await fetch("https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/pokedex.json");
     pokemonList = await response.json();
+    console.log(pokemonList);
     displayPokemon(pokemonList);
 };
 const reset = () => {
