@@ -7,7 +7,7 @@ const displayPokemon = (mons) => {
         let pokemonName = document.createElement("h3");
         pokemonName.textContent = mon.name.english;
         let pokemonImg = document.createElement("img");
-        pokemonImg.setAttribute("src", mon.image.thumbnail);
+        pokemonImg.setAttribute("src", mon.image.hires);
         pokemonImg.setAttribute("alt", mon.name.english);
         article.appendChild(pokemonName);
         article.appendChild(pokemonImg);
@@ -26,7 +26,7 @@ const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type.includes("Normal")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal")));
             break;
         case "fighting":
             displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting") || mon.type[1].includes("Fighting")));
