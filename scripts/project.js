@@ -5,10 +5,10 @@ const displayPokemon = (mons) => {
     mons.forEach(mon => {
         let article = document.createElement("article");
         let pokemonName = document.createElement("h3");
-        pokemonName.textContent = mon.name[english];
+        pokemonName.textContent = mon.name.english;
         let pokemonImg = document.createElement("img");
-        pokemonImg.setAttribute("src", mon.image[sprite]);
-        pokemonImg.setAttribute("alt", mon.name[english]);
+        pokemonImg.setAttribute("src", mon.image.sprite);
+        pokemonImg.setAttribute("alt", mon.name.english);
         article.appendChild(pokemonName);
         article.appendChild(pokemonImg);
         pokemonElement.appendChild(article);
