@@ -26,7 +26,7 @@ const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal")));
+            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal") || (mon.type.length == 2 && mon.type[1].includes("Normal"))));
             break;
         case "fighting":
             displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting") || mon.type[1].includes("Fighting")));
