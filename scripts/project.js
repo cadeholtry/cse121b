@@ -87,7 +87,9 @@ const sortBy = (mons) => {
             }
             break;
         case "fighting":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting")));
+            if (mons.type.length == 2) {
+            displayPokemon(mons.filter(mon => mon.type[1].includes("Fighting")));
+            }
             break;
         case "water":
             displayPokemon(mons.filter(mon => mon.type[0].includes("Water")));
