@@ -1,6 +1,13 @@
-
+import { typeBuilder, genBuilder } from "./project_utilities.js";
 const pokemonElement = document.querySelector("#pokemon");
 let pokemonList = [];
+let height = 1.0;
+let weightInput = 1.0;
+let filter1 = (mon => mon.id > 0);
+let filter2 = (mon => mon.id > 0);
+let filter3 = (mon => mon.id > 0);
+let filter4 = (mon => mon.id > 0);
+let filter5 = (mon => mon.id > 0);
 const displayPokemon = (mons) => {
     mons.forEach(mon => {
         let article = document.createElement("article");
@@ -26,123 +33,182 @@ const sortBy = (mons) => {
     reset();
     switch (document.querySelector("#type1").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Normal")));
+            filter1 = typeBuilder("Normal");
             break;
         case "fighting":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fighting")));
+            filter1 = typeBuilder("Fighting");
             break;
         case "water":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Water")));
+            filter1 = typeBuilder("Water");
             break;
         case "fire":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fire")));
+            filter1 = typeBuilder("Fire");
             break;
         case "grass":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Grass")));
+            filter1 = typeBuilder("Grass");
             break;
         case "electric":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Electric")));
+            filter1 = typeBuilder("Electric");
             break;
         case "poison":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Poison")));
+            filter1 = typeBuilder("Poison");
             break;
         case "bug":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Bug")));
+            filter1 = typeBuilder("Bug");
             break;
         case "psychic":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Psychic")));
+            filter1 = typeBuilder("Psychic");
             break;
         case "ghost":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ghost")));
+            filter1 = typeBuilder("Ghost");
             break;
         case "ground":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ground")));
+            filter1 = typeBuilder("Ground");
             break;
         case "flying":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Flying")));
+            filter1 = typeBuilder("Flying");
             break;
         case "ice":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Ice")));
+            filter1 = typeBuilder("Ice");
             break;
         case "rock":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Rock")));
+            filter1 = typeBuilder("Rock");
             break;
         case "dragon":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Dragon")));
+            filter1 = typeBuilder("Dragon");
             break;
         case "steel":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Steel")));
+            filter1 = typeBuilder("Steel");
             break;
         case "dark":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Dark")));
+            filter1 = typeBuilder("Dark");
             break;
         case "fairy":
-            displayPokemon(mons.filter(mon => mon.type[0].includes("Fairy")));
+            filter1 = typeBuilder("Fairy");
             break;
-    }
+    };
     switch (document.querySelector("#type2").value) {
         case "normal":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Normal")));
+            filter2 = typeBuilder("Normal");
             break;
         case "fighting":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Fighting")));
+            filter2 = typeBuilder("Fighting");
             break;
         case "water":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Water")));
+            filter2 = typeBuilder("Water");
             break;
         case "fire":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Fire")));
+            filter2 = typeBuilder("Fire");
             break;
         case "grass":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Grass")));
+            filter2 = typeBuilder("Grass");
             break;
         case "electric":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Electric")));
+            filter2 = typeBuilder("Electric");
             break;
         case "poison":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Poison")));
+            filter2 = typeBuilder("Poison");
             break;
         case "bug":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Bug")));
+            filter2 = typeBuilder("Bug");
             break;
         case "psychic":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Psychic")));
+            filter2 = typeBuilder("Psychic");
             break;
         case "ghost":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Ghost")));
+            filter2 = typeBuilder("Ghost");
             break;
         case "ground":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Ground")));
+            filter2 = typeBuilder("Ground");
             break;
         case "flying":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Flying")));
+            filter2 = typeBuilder("Flying");
             break;
         case "ice":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Ice")));
+            filter2 = typeBuilder("Ice");
             break;
         case "rock":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Rock")));
+            filter2 = typeBuilder("Rock");
             break;
         case "dragon":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Dragon")));
+            filter2 = typeBuilder("Dragon");
             break;
         case "steel":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Steel")));
+            filter2 = typeBuilder("Steel");
             break;
         case "dark":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Dark")));
+            filter2 = typeBuilder("Dark");
             break;
         case "fairy":
-            displayPokemon(mons.filter(mon => mon.type[1].includes("Fairy")));
+            filter2 = typeBuilder("Fairy");
             break;
-        case "none":
-            displayPokemon(mons);
+    };
+    switch (document.querySelector("#gen").value) {
+        case "gen1":
+            filter3 = genBuilder(0, 152);
             break;
-    
-    }
+        case "gen2":
+            filter3 = genBuilder(151, 252);
+            break;
+        case "gen3":
+            filter3 = genBuilder(251, 387);
+            break;
+        case "gen4":
+            filter3 = genBuilder(386, 494);
+            break;
+        case "gen5":
+            filter3 = genBuilder(493, 650);
+            break;
+        case "gen6":
+            filter3 = genBuilder(649, 722);
+            break;
+        case "gen7":
+            filter3 = genBuilder(721, 810);
+            break;
+        case "gen8":
+            filter3 = genBuilder(809, 899);
+            break;
+    };
+    switch (document.querySelector("#height").value) {
+        case "greater":
+            height = Number(document.querySelector('#heightInput').value);
+            filter4 = (mon => mon.profile.height > `${height} m`);
+            break;
+        case "less":
+            height = Number(document.querySelector('#heightInput').value);
+            filter4 = (mon => mon.profile.height < `${height} m`);
+            break;
+        case "equal":
+            height = Number(document.querySelector('#heightInput').value);
+            filter4 = (mon => mon.profile.height == `${height} m`);
+            break;
+    };
+    switch (document.querySelector("#weight").value) {
+        case "greaterW":
+            weightInput = Number(document.querySelector('#weightInput').value);
+            filter5 = (mon => mon.profile.weight > `${weightInput} kg`);
+            break;
+        case "lessW":
+            weightInput = Number(document.querySelector('#weightInput').value);
+            filter5 = (mon => mon.profile.weight < `${weightInput} kg`);
+            break;
+        case "equalW":
+            weightInput = Number(document.querySelector('#weightInput').value);
+            filter5 = (mon => mon.profile.weight == `${weightInput} kg`);
+            break;
+    };
+    displayPokemon(mons.filter(filter1).filter(filter2).filter(filter3).filter(filter4).filter(filter5));
 };
-/* Event Listener */
+function whatToGuess() {
+    let listLength = pokemonList.filter(filter1).filter(filter2).filter(filter3).filter(filter4).filter(filter5).length;
+    let index = Math.floor(Math.random() * listLength);
+    let singleMon = pokemonList.filter(filter1).filter(filter2).filter(filter3).filter(filter4).filter(filter5)[index];
+    document.querySelector("#guess").value = `You should guess ${singleMon.name.english}!`;
+};
+document.querySelector('#whatToGuess').addEventListener("click", whatToGuess);
 document.querySelector("#type1").addEventListener("change", () => sortBy(pokemonList));
 document.querySelector("#type2").addEventListener("change", () => sortBy(pokemonList));
+document.querySelector("#gen").addEventListener("change", () => sortBy(pokemonList));
+document.querySelector("#height").addEventListener("change", () => sortBy(pokemonList));
+document.querySelector("#weight").addEventListener("change", () => sortBy(pokemonList));
 getAllMons();
-// test

@@ -136,7 +136,17 @@ input[type="button"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%
+    width: 100%;
+}
+#whatToGuess {
+    padding: .5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 105px;
+    cursor: pointer;
+    width: 100%;
+    margin:1fr 1fr;
 }
 
 input[type="checkbox"] {
@@ -221,7 +231,15 @@ footer {
 #section2 div {
     margin-bottom: 1rem;
 }
-
+#guess {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
 #section3 {
     background-color: rgb(250, 225, 250, .5);
 }
@@ -298,6 +316,9 @@ footer {
     justify-content: center;
 }
 
+#gridly h3 {
+    text-align: center;
+}
 #pokemon h4 {
     color: navy;
     font-size: smaller;
@@ -305,10 +326,67 @@ footer {
 
 
 #pokemon img {
-    width: 250px;
-    height: auto;
+    width: auto;
+    height: 150px;
     box-shadow: 0 0 30px #777;
     margin: .5rem;
+}
+#type1 {
+    appearance: none;
+    display: flex;
+    padding: .5rem;
+    background-color: #eee;
+    color: #444;
+    font-weight: 700;
+    margin: 1rem auto;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+}
+
+#type1 option:disabled {
+    font-style: italic;
+    padding: 1rem;
+    background-color: #111;
+    color: #eee;
+}
+#type2 {
+    appearance: none;
+    display: flex;
+    padding: .5rem;
+    background-color: #eee;
+    color: #444;
+    font-weight: 700;
+    margin: 1rem auto;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+}
+
+#type2 option:disabled {
+    font-style: italic;
+    padding: 1rem;
+    background-color: #111;
+    color: #eee;
+}
+#gen {
+    appearance: none;
+    display: flex;
+    padding: .5rem;
+    background-color: #eee;
+    color: #444;
+    font-weight: 700;
+    margin: 1rem auto;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+}
+
+#gen option:disabled {
+    font-style: italic;
+    padding: 1rem;
+    background-color: #111;
+    color: #eee;
 }
 
 /* Media Queries */

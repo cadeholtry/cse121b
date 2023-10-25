@@ -26,10 +26,23 @@
   </nav>
   <main id="gridly">
     <h1>Final: Pokemon Wordle Helper</h1>
+    <h3>Generation</h3>
+    <select id="gen" title="Enter generation">
+      <option value="" disabled selected>Generation</option>
+      <option value="gen1">Gen 1</option>
+      <option value="gen2">Gen 2</option>
+      <option value="gen3">Gen 3</option>
+      <option value="gen4">Gen 4</option>
+      <option value="gen5">Gen 5</option>
+      <option value="gen6">Gen 6</option>
+      <option value="gen7">Gen 7</option>
+      <option value="gen8">Gen 8</option>
+    </select>
 
-    <select id="type1" title="Enter type 1.">
+    <h3>Types</h3>
+    <select id="type1" title="Enter type 1">
       <option value="" disabled selected>Type 1</option>
-      <option value="normal">Normal test 7</option>
+      <option value="normal">Normal</option>
       <option value="fighting">Fighting</option>
       <option value="water">Water</option>
       <option value="fire">Fire</option>
@@ -48,8 +61,7 @@
       <option value="dark">Dark</option>
       <option value="fairy">Fairy</option>
     </select>
-
-    <select id="type2" title="Enter type 2.">
+    <select id="type2" title="Enter type 2">
         <option value="" disabled selected>Type 2</option>
         <option value="normal">Normal</option>
         <option value="fighting">Fighting</option>
@@ -70,7 +82,41 @@
         <option value="dark">Dark</option>
         <option value="fairy">Fairy</option>
         <option value="none">None</option>
-
+    </select>
+    <section id="section1">
+      <h3>Height</h3>
+      <div>
+        <label for="heightInput">Enter A Height:</label>
+        <input type="text" id="heightInput" name="heightInput">
+      </div>
+      <select id="height" title="Is it above, below or just right?">
+        <option value="" disabled selected>>, <, or =</option>
+        <option value="greater">Greater Than</option>
+        <option value="less">Less than</option>
+        <option value="equal">Equal to</option>
+      </select>
+      
+      <h3>Weight</h3>
+      <div>
+        <label for="weightInput">Enter A Weight:</label>
+        <input type="text" id="weightInput" name="weightInput">
+      </div>
+      <select id="weight" title="Is it above, below or just right?">
+        <option value="" disabled selected>>, <, or =</option>
+        <option value="greaterW">Greater Than</option>
+        <option value="lessW">Less than</option>
+        <option value="equalW">Equal to</option>
+      </select>
+    </section>
+    <h3>What to Guess?</h3>
+    <article>
+      <div>
+        <input type="button" id="whatToGuess" value="Give me a Pokemon!">
+      </div>
+      <div>
+        <input type="text" id="guess" name="guess" disabled>
+      </div>
+    </article>
     <div id="pokemon">
     </div>
   </main>
@@ -83,7 +129,9 @@
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
-  <script src="scripts/project.js"></script>
+
+  <script src="scripts/project.js" type="module"></script>
+
 </body>
 
 </html>
